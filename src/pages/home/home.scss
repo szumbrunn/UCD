@@ -1,3 +1,26 @@
 page-home {
 
 }
+
+ion-fab.fab-menu-left {
+    left:-24px;
+}
+
+ion-fab.fab-menu-right {
+    right:-24px;
+}
+
+ion-row.half-height {
+    height: 50%;
+}
+
+.fullsize {
+    height: 100%;
+    width: 100%;
+}
+
+.fullsize td {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}

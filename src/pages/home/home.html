@@ -1,21 +1,24 @@
 <ion-header>
   <ion-navbar>
-    <button ion-button menuToggle="left" left>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>Home</ion-title>
-    <button ion-button menuToggle="right" right>
-      <ion-icon name="menu"></ion-icon>
-    </button>
+    <ion-title>Dashboard</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h3>Ionic Menu Starter</h3>
-
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
-
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+<ion-content>
+  <ion-fab middle class="fab-menu-left">
+      <button ion-fab secondary mini menuToggle="left"><ion-icon name="menu"></ion-icon></button>
+    </ion-fab>
+    <ion-fab middle class="fab-menu-right">
+        <button ion-fab secondary mini menuToggle="right"><ion-icon name="menu"></ion-icon></button>
+      </ion-fab>
+<table class="fullsize">
+  <tr>
+    <td>topleft</td>
+    <td>topright</td>
+  </tr>
+  <tr>
+    <td>bottomleft</td>
+    <td>bottomright</td>
+  </tr>
+</table>
 </ion-content>
