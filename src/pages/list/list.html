@@ -8,6 +8,12 @@
 </ion-header>
 
 <ion-content>
+    <ion-fab middle class="fab-menu-left">
+        <button ion-fab secondary mini menuToggle="left"><ion-icon name="menu"></ion-icon></button>
+      </ion-fab>
+      <ion-fab middle class="fab-menu-right">
+          <button ion-fab secondary mini menuToggle="right"><ion-icon name="menu"></ion-icon></button>
+        </ion-fab>
   <ion-list>
     <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
       <ion-icon [name]="item.icon" item-start></ion-icon>

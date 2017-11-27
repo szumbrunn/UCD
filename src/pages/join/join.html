@@ -1,0 +1,96 @@
+<!--<ion-header>
+    <ion-navbar color="secondary">
+      <ion-title>Login</ion-title>
+    </ion-navbar>
+  </ion-header>-->
+
+<ion-content class="login-content" padding>
+
+    <div class="title-lead">
+        <h1>
+            Working Title
+        </h1>
+        <p class="lead">
+            Save energy, save money.
+        </p>
+    </div>
+    <div class="box">
+            <h2>You are almost done..</h2>
+    </div>
+    <div *ngIf="showkey" class="box box-login">
+
+        <h3>Join your roommates</h3>
+        <form (ngSubmit)="join()" #keyForm="ngForm">
+            <ion-row>
+                <ion-col>
+                    <ion-list inset>
+                        <ion-item>
+                            <ion-input type="text" placeholder="Enter your FlatKey here.." name="key" [(ngModel)]="ap.key" required></ion-input>
+                        </ion-item>
+                       
+
+                    </ion-list>
+                </ion-col>
+            </ion-row>
+
+            <ion-row>
+                <ion-col>
+                    <ion-item *ngIf="error">Your credentials are wrong.</ion-item>
+                </ion-col>
+            </ion-row>
+
+            <ion-row>
+                    <ion-col col-6>
+                            No FlatKey yet?
+                            <button ion-button class="submit-btn" full color="light" (click)="showkey=false">Create new shared flat</button>
+                        </ion-col>
+                <ion-col col-6 class="signup-col">
+                    <br/>
+                    <button ion-button class="submit-btn" color="primary" full type="submit" [disabled]="!keyForm.form.valid">Join</button>
+                </ion-col>
+            </ion-row>
+
+        </form>
+    </div>
+    <div *ngIf="!showkey" class="box box-login">
+            
+        <h3>Create a new shared flat</h3>
+        <form (ngSubmit)="create()" #flatForm="ngForm">
+            <ion-row>
+                <ion-col>
+                    <ion-list inset>
+                        <ion-item>
+                            <ion-input type="text" placeholder="Flat name" name="name" [(ngModel)]="ap.name" required></ion-input>
+                        </ion-item>
+                        <ion-item>
+                                <ion-input type="text" placeholder="Street" name="street" [(ngModel)]="ap.street" required></ion-input>
+                        </ion-item>
+                        <ion-item>
+                                <ion-input type="text" placeholder="Place" name="place" [(ngModel)]="ap.place" required></ion-input>
+                        </ion-item>
+                        
+
+                    </ion-list>
+                </ion-col>
+            </ion-row>
+
+            <ion-row>
+                <ion-col>
+                    <ion-item *ngIf="error">Your credentials are wrong.</ion-item>
+                </ion-col>
+            </ion-row>
+
+            <ion-row>
+                    <ion-col col-6>
+                            Already have a FlatKey?
+                            <button ion-button class="submit-btn" full color="light" (click)="showkey=true">Join your roommates</button>
+                        </ion-col>
+                <ion-col col-6 class="signup-col">
+                    <br/>
+                    <button ion-button class="submit-btn" color="primary" full type="submit" [disabled]="!flatForm.form.valid">Create new shared flat</button>
+                </ion-col>
+            </ion-row>
+
+        </form>
+    </div>
+</ion-content>

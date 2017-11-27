@@ -24,8 +24,7 @@ export class MyApp {
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Home', component: HomePage },
-      { title: 'List', component: ListPage },
-      { title: 'Account', component: AccountPage }
+      { title: 'List', component: ListPage }
     ];
 
   }
@@ -45,7 +44,12 @@ export class MyApp {
     this.nav.setRoot(page.component);
   }
 
+  account() {
+    this.nav.setRoot(AccountPage);
+  }
+
   logout() {
+    localStorage.removeItem('flat')
     localStorage.removeItem('login');
     this.nav.setRoot(LoginPage);
   }

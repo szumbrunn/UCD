@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
 import { HomePage } from '../home/home';
+import { JoinPage } from '../join/join';
 
 @Component({
   selector: 'page-login',
@@ -21,7 +22,6 @@ dummyCredentials = { email: 'ucd', password: '123' };
     if(loginObj!=null) {
       this.loginCredentials.email = loginObj['email'];
       this.loginCredentials.password = loginObj['password'];
-      console.log(this.loginCredentials);
       this.login();
       this.clearLoginCredentials();
     }
@@ -29,14 +29,18 @@ dummyCredentials = { email: 'ucd', password: '123' };
 
 
   login() {
-      if(this.loginCredentials.email==this.dummyCredentials.email &&
-        this.loginCredentials.password==this.dummyCredentials.password) {
-            this.error = false;
-            this.navCtrl.setRoot(HomePage);
-            localStorage.setItem("login", JSON.stringify(this.loginCredentials));
-        } else {
-            this.error = true;
-        }
+    if(this.loginCredentials.email==this.dummyCredentials.email &&
+      this.loginCredentials.password==this.dummyCredentials.password) {
+      this.error = false;
+      localStorage.setItem("login", JSON.stringify(this.loginCredentials));
+      if(localStorage.getItem('flat')!=null) {
+        this.navCtrl.setRoot(HomePage);
+      } else {
+        this.navCtrl.setRoot(JoinPage);
+      }
+    } else {
+        this.error = true;
+    }
   }
 
   clearLoginCredentials(): void {

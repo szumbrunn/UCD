@@ -10,6 +10,7 @@ import { AccountPage } from '../pages/account/account';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { LoginPage } from '../pages/login/login';
+import { JoinPage } from '../pages/join/join';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { LoginPage } from '../pages/login/login';
     HomePage,
     ListPage,
     AccountPage,
-    LoginPage
+    LoginPage,
+    JoinPage
   ],
   imports: [
     BrowserModule,
@@ -29,7 +31,8 @@ import { LoginPage } from '../pages/login/login';
     HomePage,
     ListPage,
     AccountPage,
-    LoginPage
+    LoginPage,
+    JoinPage
   ],
   providers: [
     StatusBar,
