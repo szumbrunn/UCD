@@ -18,7 +18,17 @@
   </tr>
   <tr>
     <td>bottomleft</td>
-    <td>bottomright</td>
+    <td>
+      <ion-row *ngFor="let mate of roommates | sortRoommates">
+        <ion-col>
+            <ion-icon *ngIf="mate.trend>0" name="arrow-round-up" item-start></ion-icon>
+            <ion-icon *ngIf="mate.trend==0" name="arrow-round-forward" item-start></ion-icon>
+            <ion-icon *ngIf="mate.trend<0" name="arrow-round-down" item-start></ion-icon>  
+        </ion-col>
+        <ion-col>{{mate.powerusage}}</ion-col>
+        <ion-col [ngClass]="{'current': mate.current}">{{mate.current? 'You' : mate.name}}</ion-col>
+      </ion-row>
+    </td>
   </tr>
 </table>
 </ion-content>

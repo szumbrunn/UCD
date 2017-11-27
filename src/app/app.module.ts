@@ -7,6 +7,8 @@ import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { AccountPage } from '../pages/account/account';
 
+import {RoommatesSortPipe} from '../pipes/sort.pipe';
+
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { LoginPage } from '../pages/login/login';
@@ -20,7 +22,8 @@ import { QRCodeModule } from 'angular2-qrcode';
     ListPage,
     AccountPage,
     LoginPage,
-    JoinPage
+    JoinPage,
+    RoommatesSortPipe
   ],
   imports: [
     BrowserModule,
@@ -39,7 +42,8 @@ import { QRCodeModule } from 'angular2-qrcode';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    
   ]
 })
 export class AppModule {}
