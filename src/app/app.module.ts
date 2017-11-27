@@ -11,6 +11,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { LoginPage } from '../pages/login/login';
 import { JoinPage } from '../pages/join/join';
+import { QRCodeModule } from 'angular2-qrcode';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { JoinPage } from '../pages/join/join';
   ],
   imports: [
     BrowserModule,
+    QRCodeModule,
     IonicModule.forRoot(MyApp, {mode: 'ios'}),
   ],
   bootstrap: [IonicApp],

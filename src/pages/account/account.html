@@ -17,6 +17,52 @@
         <ion-fab middle class="fab-menu-right">
             <button ion-fab secondary mini menuToggle="right"><ion-icon name="menu"></ion-icon></button>
           </ion-fab>
-    Account
+
+    <ion-card>
+        
+          <ion-card-header>
+            <strong>Profile</strong>
+          </ion-card-header>
+        
+          <ion-list>
+              <ion-item>
+                Name: {{user.firstname}}
+              </ion-item>
+              <ion-item>
+                  Email: {{user.email}}
+                </ion-item>
+                <ion-item>
+                    Password: ********
+                  </ion-item>
+            </ion-list>
+        
+        </ion-card>
+        <ion-card>
+            
+              <ion-card-header>
+                <strong>Shared flat</strong>
+              </ion-card-header>
+            
+              <ion-list>
+                <ion-item>
+                  Name: {{flat.name}}
+                </ion-item>
+                <ion-item>
+                    Street: {{flat.street}}
+                  </ion-item>
+                  <ion-item>
+                      Place: {{flat.place}}
+                    </ion-item>
+                    <ion-item>
+                        Key: {{flat.key}}<br/>
+                        <small>Share this key with your roommates to join this flat.</small>
+                        <div style="width: 100px;height:100px;margin: auto;margin-top:10px;">
+                            <qr-code [value]="flat.key" [size]="100"></qr-code>
+                          </div>
+                        
+                      </ion-item>
+              </ion-list>
+            
+            </ion-card>
   </ion-content>
   

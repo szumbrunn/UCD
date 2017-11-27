@@ -32,6 +32,7 @@ dummyCredentials = { email: 'ucd', password: '123' };
     if(this.loginCredentials.email==this.dummyCredentials.email &&
       this.loginCredentials.password==this.dummyCredentials.password) {
       this.error = false;
+      this.loginCredentials.firstname = 'Kim ';
       localStorage.setItem("login", JSON.stringify(this.loginCredentials));
       if(localStorage.getItem('flat')!=null) {
         this.navCtrl.setRoot(HomePage);
