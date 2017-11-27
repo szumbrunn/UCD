@@ -46,6 +46,7 @@ export class MyApp {
   }
 
   logout() {
+    localStorage.removeItem('login');
     this.nav.setRoot(LoginPage);
   }
 }

@@ -17,6 +17,14 @@ dummyCredentials = { email: 'ucd', password: '123' };
 
   constructor(public navCtrl: NavController) {
 
+    let loginObj = JSON.parse(localStorage.getItem("login"));
+    if(loginObj!=null) {
+      this.loginCredentials.email = loginObj['email'];
+      this.loginCredentials.password = loginObj['password'];
+      console.log(this.loginCredentials);
+      this.login();
+      this.clearLoginCredentials();
+    }
   }
 
 
@@ -25,9 +33,14 @@ dummyCredentials = { email: 'ucd', password: '123' };
         this.loginCredentials.password==this.dummyCredentials.password) {
             this.error = false;
             this.navCtrl.setRoot(HomePage);
+            localStorage.setItem("login", JSON.stringify(this.loginCredentials));
         } else {
             this.error = true;
         }
+  }
+
+  clearLoginCredentials(): void {
+    this.loginCredentials = { email: '', password: '', firstname: '' };
   }
 
   signup() {
