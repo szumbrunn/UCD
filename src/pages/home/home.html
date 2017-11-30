@@ -14,7 +14,7 @@
 <table class="fullsize">
   <tr>
     <td>topleft</td>
-    <td>topright</td>
+    <td><img src="assets/imgs/PieChart1_EnergyConsumption.png" alt="EngCons" class="pieChart"></td>
   </tr>
   <tr>
     <td>bottomleft</td>
@@ -23,7 +23,7 @@
         <ion-col>
             <ion-icon *ngIf="mate.trend>0" name="arrow-round-up" item-start></ion-icon>
             <ion-icon *ngIf="mate.trend==0" name="arrow-round-forward" item-start></ion-icon>
-            <ion-icon *ngIf="mate.trend<0" name="arrow-round-down" item-start></ion-icon>  
+            <ion-icon *ngIf="mate.trend<0" name="arrow-round-down" item-start></ion-icon>
         </ion-col>
         <ion-col>{{mate.powerusage}}</ion-col>
         <ion-col [ngClass]="{'current': mate.current}">{{mate.current? 'You' : mate.name}}</ion-col>

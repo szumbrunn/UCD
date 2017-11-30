@@ -15,7 +15,7 @@
         </p>
     </div>
     <div *ngIf="showlogin" class="box box-login">
-       
+
 
         <form (ngSubmit)="login()" #loginForm="ngForm">
             <ion-row>
@@ -72,7 +72,7 @@
                                 <ion-input type="text" placeholder="Firstname" name="firstname" [(ngModel)]="loginCredentials.firstname" required></ion-input>
                             </ion-item>
 
-                        
+
 
                     </ion-list>
                 </ion-col>
@@ -80,7 +80,7 @@
 
             <ion-row>
                     <ion-col>
-                        <ion-item *ngIf="error">You must provide valid stuff.</ion-item>
+                        <ion-item *ngIf="error">Please provide valid information</ion-item>
                     </ion-col>
             </ion-row>
 
