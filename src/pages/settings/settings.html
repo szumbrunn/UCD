@@ -1,0 +1,33 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle="left" left>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Challenges</ion-title>
+        <button ion-button menuToggle="right" right>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+    <ion-fab middle class="fab-menu-left">
+        <button ion-fab secondary mini menuToggle="left">
+            <ion-icon name="menu"></ion-icon>
+        </button>
+    </ion-fab>
+    <ion-fab middle class="fab-menu-right">
+        <button ion-fab secondary mini menuToggle="right">
+            <ion-icon name="menu"></ion-icon>
+        </button>
+    </ion-fab>
+   
+    <ion-card>
+        <ion-item>
+                <ion-label> Experiment switch (1:2)</ion-label>
+                <ion-toggle checked="false" [(ngModel)]="experiment" (ionChange)="changeExp()"></ion-toggle>
+        </ion-item>
+        </ion-card>
+
+</ion-content>

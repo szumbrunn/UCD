@@ -4,8 +4,8 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
 import { AccountPage } from '../pages/account/account';
+import { ChallengePage } from '../pages/challenge/challenge';
 
 import {RoommatesSortPipe} from '../pipes/sort.pipe';
 
@@ -13,16 +13,18 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { LoginPage } from '../pages/login/login';
 import { JoinPage } from '../pages/join/join';
+import { SettingsPage } from '../pages/settings/settings';
 import { QRCodeModule } from 'angular2-qrcode';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    ListPage,
     AccountPage,
     LoginPage,
     JoinPage,
+    ChallengePage,
+    SettingsPage,
     RoommatesSortPipe
   ],
   imports: [
@@ -34,10 +36,11 @@ import { QRCodeModule } from 'angular2-qrcode';
   entryComponents: [
     MyApp,
     HomePage,
-    ListPage,
     AccountPage,
     LoginPage,
-    JoinPage
+    JoinPage,
+    SettingsPage,
+    ChallengePage
   ],
   providers: [
     StatusBar,

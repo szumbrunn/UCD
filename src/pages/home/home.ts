@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 import { RoomMate } from './roommate';
+
+import { ChallengePage } from '../challenge/challenge';
 
 @Component({
   selector: 'page-home',
@@ -18,7 +20,7 @@ export class HomePage {
   per2: number = 5000;
   currentMillis: number = 0;
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController,public navParams: NavParams) {
 
     this.rm1 = new RoomMate();
     this.rm1.name = 'John';
@@ -43,7 +45,7 @@ export class HomePage {
   ngAfterViewInit() {
     setInterval(()=>{
       let val: number = Math.sin(this.currentMillis / (this.per2 * 2* Math.PI) + Math.PI/2);
-      //this.rm2.powerusage += (this.currentMillis % 400)? Math.abs(Math.round(val)) : 0;
+      this.rm2.powerusage += (this.currentMillis % 400)? Math.abs(Math.round(val)) : 0;
       val = Math.sin(this.currentMillis / (this.per1 * 2* Math.PI) );
       this.rm1.powerusage += (Math.round(val)>0)? 1 : 0;
       this.rm3.powerusage += (this.currentMillis % 1000==0)? 1:0;
@@ -99,8 +101,10 @@ export class HomePage {
       }
     }
     this.tempRoommateId = JSON.parse(JSON.stringify(this.roommates));
-    
-    
+  }
+
+  showChallenges() {
+    this.navCtrl.setRoot(ChallengePage);
   }
 
 }

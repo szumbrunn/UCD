@@ -1,0 +1,310 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle="left" left>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Challenges</ion-title>
+        <button ion-button menuToggle="right" right>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+    <ion-fab middle class="fab-menu-left">
+        <button ion-fab secondary mini menuToggle="left">
+            <ion-icon name="menu"></ion-icon>
+        </button>
+    </ion-fab>
+    <ion-fab middle class="fab-menu-right">
+        <button ion-fab secondary mini menuToggle="right">
+            <ion-icon name="menu"></ion-icon>
+        </button>
+    </ion-fab>
+    <ion-grid *ngIf="!exp">
+        <ion-row>
+
+            <ion-card>
+                <ion-item class="red clickable" (click)="sel=1">
+                    <ion-label>11. Oct 2017 – 11. Dec 2017</ion-label>
+                    <ion-label>Green-Power-House</ion-label>
+                </ion-item>
+                <div *ngIf="sel==1">
+                    <ion-row>
+                        <ion-col col-3 class="img-padding">
+                            <img class="wg-icon" src="assets/imgs/pika.png" />
+                            <p class="wg-title">OurPowerSavingFriends</p>
+                        </ion-col>
+                        <ion-col col-3>
+                            <p class="total-energy">170 EB*</p>
+                            <ion-list>
+                                <ion-item>
+                                    <ion-label>Johanna</ion-label>
+                                    <ion-label>50 EB*</ion-label>
+                                </ion-item>
+                                <ion-item>
+                                    <ion-label>Kusi</ion-label>
+                                    <ion-label>15 EB*</ion-label>
+                                </ion-item>
+                                <ion-item>
+                                    <ion-label>Ueli</ion-label>
+                                    <ion-label>27 EB*</ion-label>
+                                </ion-item>
+                            </ion-list>
+                        </ion-col>
+                        <ion-col col-3 class="img-padding">
+                            <img class="wg-icon" src="assets/imgs/bulb.png" />
+                            <p class="wg-title">Green-Power-House</p>
+                        </ion-col>
+                        <ion-col col-3>
+                            <p class="total-energy">121 EB*</p>
+                        </ion-col>
+                    </ion-row>
+                </div>
+            </ion-card>
+            <ion-card>
+                <ion-item class="green clickable" (click)="sel=2">
+                    <ion-label>20. Oct 2017 – 20. Nov 2017</ion-label>
+                    <ion-label>MinimalEnergy</ion-label>
+                </ion-item>
+                <div *ngIf="sel==2">
+                        <ion-row>
+                                <ion-col col-3 class="img-padding">
+                                    <img class="wg-icon" src="assets/imgs/pika.png" />
+                                    <p class="wg-title">OurPowerSavingFriends</p>
+                                </ion-col>
+                                <ion-col col-3>
+                                    <p class="total-energy">84 EB*</p>
+                                    <ion-list>
+                                        <ion-item>
+                                            <ion-label>Johanna</ion-label>
+                                            <ion-label>13 EB*</ion-label>
+                                        </ion-item>
+                                        <ion-item>
+                                            <ion-label>Kusi</ion-label>
+                                            <ion-label>4 EB*</ion-label>
+                                        </ion-item>
+                                        <ion-item>
+                                            <ion-label>Ueli</ion-label>
+                                            <ion-label>18 EB*</ion-label>
+                                        </ion-item>
+                                    </ion-list>
+                                </ion-col>
+                                <ion-col col-3 class="img-padding">
+                                    <img class="wg-icon" src="assets/imgs/stick.jpg" />
+                                    <p class="wg-title">MinimalEnergy</p>
+                                </ion-col>
+                                <ion-col col-3>
+                                    <p class="total-energy">97 EB*</p>
+                                </ion-col>
+                            </ion-row>
+                        </div>
+            </ion-card>
+            <ion-card>
+                <ion-item class="green clickable" (click)="sel=3">
+                    <ion-label>06. Nov 2017 – 20. Dec 2017</ion-label>
+                    <ion-label>Masters*Of*The*Universe</ion-label>
+                </ion-item>
+                <div *ngIf="sel==3">
+                        <ion-row>
+                                <ion-col col-3 class="img-padding">
+                                    <img class="wg-icon" src="assets/imgs/pika.png" />
+                                    <p class="wg-title">OurPowerSavingFriends</p>
+                                </ion-col>
+                                <ion-col col-3>
+                                    <p class="total-energy">15 EB*</p>
+                                    <ion-list>
+                                        <ion-item>
+                                            <ion-label>Johanna</ion-label>
+                                            <ion-label>5 EB*</ion-label>
+                                        </ion-item>
+                                        <ion-item>
+                                            <ion-label>Kusi</ion-label>
+                                            <ion-label>4 EB*</ion-label>
+                                        </ion-item>
+                                        <ion-item>
+                                            <ion-label>Ueli</ion-label>
+                                            <ion-label>0 EB*</ion-label>
+                                        </ion-item>
+                                    </ion-list>
+                                </ion-col>
+                                <ion-col col-3 class="img-padding">
+                                    <img class="wg-icon" src="assets/imgs/mou.jpg" />
+                                    <p class="wg-title">Masters*Of*The*Universe</p>
+                                </ion-col>
+                                <ion-col col-3>
+                                    <p class="total-energy">21 EB*</p>
+                                </ion-col>
+                            </ion-row>
+                        </div>
+            </ion-card>
+            <ion-card>
+                <ion-item class="gray">
+                    <ion-label>24. Dec 2017 – 11. Jan 2018</ion-label>
+                    <ion-label>Masters*Of*The*Universe</ion-label>
+                </ion-item>
+            </ion-card>
+            <ion-card>
+                <ion-item class="gray">
+                    <ion-label>1. Jan 2018 – 31. Jan 2018</ion-label>
+                    <ion-label>Low_Energy_Stars</ion-label>
+                </ion-item>
+            </ion-card>
+            <ion-card>
+                <ion-item class="gray">
+                    <ion-label>11. Feb 2018 – 7. May 2018</ion-label>
+                    <ion-label>Green-Power-House</ion-label>
+                </ion-item>
+            </ion-card>
+        </ion-row>
+    </ion-grid>
+
+    <ion-grid *ngIf="exp">
+        <ion-row>
+            <ion-col col-6>
+                <ion-card>
+                    <ion-item class="red clickable" (click)="sel=1">
+                        <ion-label>11. Oct 2017 – 11. Dec 2017</ion-label>
+                        <ion-label>Green-Power-House</ion-label>
+                    </ion-item>
+                </ion-card>
+                <ion-card>
+                    <ion-item class="green clickable" (click)="sel=2">
+                        <ion-label>20. Oct 2017 – 20. Nov 2017</ion-label>
+                        <ion-label>MinimalEnergy</ion-label>
+                    </ion-item>
+                </ion-card>
+                <ion-card>
+                    <ion-item class="green clickable" (click)="sel=3">
+                        <ion-label>06. Nov 2017 – 20. Dec 2017</ion-label>
+                        <ion-label>Masters*Of*The*Universe</ion-label>
+                    </ion-item>
+                </ion-card>
+                <ion-card>
+                    <ion-item class="gray">
+                        <ion-label>24. Dec 2017 – 11. Jan 2018</ion-label>
+                        <ion-label>Masters*Of*The*Universe</ion-label>
+                    </ion-item>
+                </ion-card>
+                <ion-card>
+                    <ion-item class="gray">
+                        <ion-label>1. Jan 2018 – 31. Jan 2018</ion-label>
+                        <ion-label>Low_Energy_Stars</ion-label>
+                    </ion-item>
+                </ion-card>
+                <ion-card>
+                    <ion-item class="gray">
+                        <ion-label>11. Feb 2018 – 7. May 2018</ion-label>
+                        <ion-label>Green-Power-House</ion-label>
+                    </ion-item>
+                </ion-card>
+            </ion-col>
+
+            <ion-col col-6>
+                <ion-card *ngIf="sel==1">
+                    <ion-row>
+                        <ion-col col-6>
+                            <img class="wg-icon" src="assets/imgs/pika.png" />
+                            <p class="wg-title">OurPowerSavingFriends</p>
+                        </ion-col>
+                        <ion-col col-6>
+                            <p class="total-energy">170 EB*</p>
+                            <ion-list>
+                                <ion-item>
+                                    <ion-label>Johanna</ion-label>
+                                    <ion-label>50 EB*</ion-label>
+                                </ion-item>
+                                <ion-item>
+                                    <ion-label>Kusi</ion-label>
+                                    <ion-label>15 EB*</ion-label>
+                                </ion-item>
+                                <ion-item>
+                                    <ion-label>Ueli</ion-label>
+                                    <ion-label>27 EB*</ion-label>
+                                </ion-item>
+                            </ion-list>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row>
+                        <ion-col col-6>
+                            <img class="wg-icon" src="assets/imgs/bulb.png" />
+                            <p class="wg-title">Green-Power-House</p>
+                        </ion-col>
+                        <ion-col col-6>
+                            <p class="total-energy">121 EB*</p>
+                        </ion-col>
+                    </ion-row>
+                </ion-card>
+                <ion-card *ngIf="sel==2">
+                    <ion-row>
+                        <ion-col col-6>
+                            <img class="wg-icon" src="assets/imgs/pika.png" />
+                            <p class="wg-title">OurPowerSavingFriends</p>
+                        </ion-col>
+                        <ion-col col-6>
+                            <p class="total-energy">84 EB*</p>
+                            <ion-list>
+                                <ion-item>
+                                    <ion-label>Johanna</ion-label>
+                                    <ion-label>13 EB*</ion-label>
+                                </ion-item>
+                                <ion-item>
+                                    <ion-label>Kusi</ion-label>
+                                    <ion-label>4 EB*</ion-label>
+                                </ion-item>
+                                <ion-item>
+                                    <ion-label>Ueli</ion-label>
+                                    <ion-label>18 EB*</ion-label>
+                                </ion-item>
+                            </ion-list>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row>
+                        <ion-col col-6>
+                            <img class="wg-icon" src="assets/imgs/stick.jpg" />
+                            <p class="wg-title">MinimalEnergy</p>
+                        </ion-col>
+                        <ion-col col-6>
+                            <p class="total-energy">97 EB*</p>
+                        </ion-col>
+                    </ion-row>
+                </ion-card>
+                <ion-card *ngIf="sel==3">
+                    <ion-row>
+                        <ion-col col-6>
+                            <img class="wg-icon" src="assets/imgs/pika.png" />
+                            <p class="wg-title">OurPowerSavingFriends</p>
+                        </ion-col>
+                        <ion-col col-6>
+                            <p class="total-energy">15 EB*</p>
+                            <ion-list>
+                                <ion-item>
+                                    <ion-label>Johanna</ion-label>
+                                    <ion-label>5 EB*</ion-label>
+                                </ion-item>
+                                <ion-item>
+                                    <ion-label>Kusi</ion-label>
+                                    <ion-label>4 EB*</ion-label>
+                                </ion-item>
+                                <ion-item>
+                                    <ion-label>Ueli</ion-label>
+                                    <ion-label>0 EB*</ion-label>
+                                </ion-item>
+                            </ion-list>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row>
+                        <ion-col col-6>
+                            <img class="wg-icon" src="assets/imgs/mou.jpg" />
+                            <p class="wg-title">Masters*Of*The*Universe</p>
+                        </ion-col>
+                        <ion-col col-6>
+                            <p class="total-energy">21 EB*</p>
+                        </ion-col>
+                    </ion-row>
+                </ion-card>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>
