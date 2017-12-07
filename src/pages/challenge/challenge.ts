@@ -11,7 +11,7 @@ export class ChallengePage {
 
   constructor(public navCtrl: NavController) {
     let experiment = localStorage.getItem("experiment");
-    if(experiment!=undefined && experiment!="undefined") {
+    if(experiment!=undefined && experiment!="undefined" && experiment) {
         this.exp = JSON.parse(experiment);
     }
   }

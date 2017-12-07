@@ -12,7 +12,7 @@ export class SettingsPage {
   constructor(public navCtrl: NavController, private navParams: NavParams) {
     let exp = localStorage.getItem("experiment");
    
-    if(exp!="undefined" && exp!=undefined) {
+    if(exp!="undefined" && exp!=undefined && exp) {
       this.experiment = JSON.parse(exp);
     }
   }
