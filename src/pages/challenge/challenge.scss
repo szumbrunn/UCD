@@ -32,6 +32,11 @@
 
 ion-item ion-label {
     white-space: normal;
+    padding-right: 1em;
+}
+
+ion-item ion-label:nth-child(2) {
+    text-align: right;
 }
 
 .card-ios p {
@@ -40,4 +45,26 @@ ion-item ion-label {
 
 .bold {
    font-weight: bold;
+}
+
+.indent {
+    padding-left: 1em;
+}
+
+ion-row.pop .result-centered {
+    font-size: 13pt;
+    padding-top: 3em;
+    text-align: center;
+    vertical-align: middle;
+    height: 100%;
+    width: 100%;
+}
+
+ion-row.exp .result-centered {
+    font-size: 13pt;
+    padding-top: 1.1em;
+    text-align: center;
+    vertical-align: middle;
+    height: 100%;
+    width: 100%;
 }
