@@ -34,10 +34,15 @@ ion-item ion-label {
     white-space: normal;
 }
 
-.card-ios p {
-    text-align: center;
-}
+//.card-ios p {
+//    text-align: center;
+//}
 
 .bold {
    font-weight: bold;
+}
+
+.username{
+   display: block;
+   padding-left: 20px;
 }
